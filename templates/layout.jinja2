@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% include "boilerplate_meta.jinja2" ignore missing %}
+
+    {% block extra_script %}
+    
+    {% endblock extra_script %}
+</head>
+<body class="bg-dark">
+
+    <div class="container bg-light">
+    {% include "navbar.jinja2" ignore missing %}
+    <hr>
+    {% block heading %}
+    
+    {% endblock heading %}
+    <hr>
+    {% block content %}
+    <hr>
+    
+    {% endblock content %}
+
+    {% block footer %}
+    
+    {% endblock footer %}
+    <hr>
+
+    {# {% include "footer.jinja2" %} #}
+    {# {% extends "footer.jinja2" %} #}
+    </div>
+    {% block type_bar %}
+    
+    {% endblock type_bar %}
+</body>
+</html>

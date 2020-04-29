@@ -1,0 +1,56 @@
+{% extends 'layout.jinja2' %}
+
+{% block extra_script %}
+{% endblock extra_script %}
+
+{% block heading %}
+    <h1>Hello!</h1>
+{% endblock heading %}
+
+{% block content %}
+    <form action="{{ url_for('index') }}" method="post">
+    <div class="form-group">
+    <label for="school_name">学校名字</label>
+    <input class="form-control" name="school_name" type="text" placeholder="学校名字">
+    </div>
+    <hr>
+    <div class="form-group">
+        <label>网址(s)若没留空</label>
+    </div>
+    <div class="form-group">
+    <label for="the_url0">补课安排</label>
+    <input class="form-control" name="the_url0" type="text" placeholder="学校网址 1">
+    </div>
+    <div class="form-group">
+    <label for="the_url1">网上教学安排</label>
+    <input class="form-control" name="the_url1" type="text" placeholder="学校网址 2">
+    </div>
+    <div class="form-group">
+    <label for="the_url2">考试安排</label>
+    <input class="form-control" name="the_url2" type="text" placeholder="学校网址 3">
+    </div>
+    <div class="form-group">
+    <label for="the_url3">上课后的作业程序SOP</label>
+    <input class="form-control" name="the_url3" type="text" placeholder="学校网址 4">
+    </div>
+    <div class="form-group">
+    <label for="the_url4">校方内部工作安排</label>
+    <input class="form-control" name="the_url4" type="text" placeholder="学校网址 5">
+    </div>
+    <hr>
+    <div class="form-group">
+    <label for="area">区域</label>
+    <select class="form-control" name="area">
+        <option value="北马">北马</option>
+        <option value="中马">中马</option>
+        <option value="南马">南马</option>
+        <option value="东马">东马</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <input class="btn btn-primary mb-2" type="submit" value="记录">
+    </div>
+    </form>
+    <hr>
+    <a class="btn btn-danger mb-2" target="_self" href="{{ url_for('postToTelegramPage') }}">发布到Telegram</a>
+{% endblock content %}

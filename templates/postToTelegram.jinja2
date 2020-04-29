@@ -1,0 +1,9 @@
+{% extends "layout.jinja2" %}
+
+{% block heading %}
+    <h1>{{ result }}</h1>
+{% endblock heading %}
+
+{% block content %}
+    <a href="{{ url_for('index') }}">Back</a>
+{% endblock content %}
