@@ -1,10 +1,10 @@
-# Independant School's action on covid-19 in Malaysia
+# Independant School's action on Covid-19 in Malaysia
 
 ---
 
 A data-entry recorder that accept
 
-1. School Name
+1. School Name（野鸡中学）
 2. 5 field of url
 3. Location where the school is at
 
